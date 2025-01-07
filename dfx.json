@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "to-do-backend": {
+      "candid": "src/to-do-backend/to-do-backend.did",
+      "package": "to-do-backend",
+      "type": "rust"
+    },
+    "to-do-frontend": {
+      "dependencies": [
+        "to-do-backend"
+      ],
+      "source": [
+        "src/to-do-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "to-do-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
