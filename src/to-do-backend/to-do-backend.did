@@ -1,3 +1,12 @@
+type Todo = record {
+    id: int;
+    description: text;
+    completed: bool;
+}
+
 service : {
-    "greet": (text) -> (text) query;
+    "add_todo": (text) -> (int);
+    "get_all_todo_list": () -> (vec Todo) query;
+    "update_todo": (int, text, bool) -> ();
+    "delete_todo": (int) -> ();
 }
